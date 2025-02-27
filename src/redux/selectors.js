@@ -7,19 +7,9 @@ export const selectTodos = (state) => state.todos.item;
 export const selectFilter = (state) => state.filter.filter;
 export const selectStatus = (state) => state.filter.status;
 
-// export const selectVisibilityTaskByStatus = (state) => {
-//   const todos = selectTodos(state);
-//   const taskStatus = selectStatus(state);
-
-//   switch (taskStatus) {
-//     case "active":
-//       return todos.filter((item) => !item.completed);
-//     case "completed":
-//       return todos.filter((item) => item.completed);
-//     default:
-//       return todos;
-//   }
-// };
+//auth
+export const selectUser = (state) => state.auth.user;
+export const selectIsLoggedIn = (state) => state.auth.isLoggedIn;
 
 export const selectVisibilityTaskByStatusMemo = createSelector(
   [selectStatus, selectTodos],
@@ -34,11 +24,6 @@ export const selectVisibilityTaskByStatusMemo = createSelector(
     }
   }
 );
-
-// export const selectUncompletedTodos = (state) => {
-//   const todos = selectTodos(state);
-//   return todos.reduce((total, curr) => (curr.completed ? total : total + 1), 0);
-// };
 
 export const selectUncompletedTodosMemo = createSelector(
   [selectTodos],
