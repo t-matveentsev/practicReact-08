@@ -1,15 +1,22 @@
 .link {
-    color: white;
-    font-size: 26px;
-    text-decoration: none;
+  color: white;
+  font-size: 26px;
+  text-decoration: none;
 }
 
 .nav {
-    display: flex;
-    gap: 20px;
+  display: flex;
+  gap: 20px;
 }
 
 .active {
-    color: gold;
-    text-decoration: underline;
+  color: gold;
+  text-decoration: underline;
+}
+
+.logoutBtn {
+  font-size: 22px;
+
+  background-color: inherit;
+  border: none;
 }
